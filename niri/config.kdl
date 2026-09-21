@@ -18,28 +18,32 @@ output "eDP-1" {
 }
 
 layout {
-    gaps 0
+    gaps 10
     focus-ring {
         off
     }
     border {
-        width 2
+        off
+        width 5
         active-color "#4c7899"
         inactive-color "#333333"
         urgent-color "#900000"
     }
     shadow {
-		off
+		on
+		offset x=4 y=4
+		softness 4
+		spread 4
+		color "#000000"
     }
     tab-indicator {
         on
         place-within-column
     }
-    background-color "#000000"
+    background-color "transparent"
 }
 
 overview {
-    backdrop-color "#000000"
     workspace-shadow {
         off
     }
@@ -61,6 +65,7 @@ animations {
 }
 
 spawn-at-startup "mako"
+spawn-at-startup "awww-daemon"
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -153,4 +158,25 @@ window-rule {
     open-floating true
     default-column-width { fixed 800; }
     default-window-height { fixed 600; }
+}
+
+window-rule {
+    match app-id="qalculate-gtk"
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 600; }
+}
+
+layer-rule {
+    match namespace="awww-daemon"
+    place-within-backdrop true
+}
+
+window-rule {
+    opacity 0.75
+}
+
+window-rule {
+    match is-focused=true
+    opacity 1.0
 }

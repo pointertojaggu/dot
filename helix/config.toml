@@ -1,5 +1,3 @@
-theme = ""
-
 [editor]
 mouse = true
 line-number = "relative"
@@ -62,7 +60,7 @@ select = "underline"
 hidden = true
 
 [editor.indent-guides]
-render = true
+render = false
 character = "┊"
 
 [editor.inline-diagnostics]
