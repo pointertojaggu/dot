@@ -70,9 +70,9 @@ spawn-at-startup "awww-daemon"
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
-    Mod+B hotkey-overlay-title="Open a Browser: Brave" { spawn "brave"; }
+    Mod+B hotkey-overlay-title="Open a Browser: Brave" { spawn "brave-origin-nightly"; }
     Mod+D hotkey-overlay-title="Open a File Browser: Nautilus" { spawn "nautilus"; }
-    Mod+P { spawn "kitty" "--class" "launcher" "-e" "launcher"; }
+    Mod+P { spawn "bemenu-run" "--bottom" "--width-factor" "0.35" "--list" "8" "--fn" "SpaceMono Nerd Font 10" "--prompt" ">" "--ignorecase" "--no-cursor" "--border" "2" "--border-radius" "0" "--bdr" "#4c7899" "--tb" "#222222" "--tf" "#ffffff" "--fb" "#222222" "--ff" "#ffffff" "--nb" "#222222" "--nf" "#ffffff" "--hb" "#285577" "--hf" "#ffffff" "--cb" "#285577" "--cf" "#ffffff" "--sb" "#222222" "--sf" "#ffffff" "--ab" "#222222" "--af" "#ffffff" "--scrollbar" "none"; }
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print  { screenshot-window; }
